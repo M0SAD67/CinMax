@@ -19,7 +19,7 @@
 Get the latest version of CineMax for your Android device:
 
 <p align="center">
-  <a href="[https://github.com/M0SAD67/CinMax/releases/latest](https://github.com/M0SAD67/CinMax/releases/download/V1.0.0/app-release.apk)">
+  <a href="https://github.com/M0SAD67/CinMax/releases/download/V1.0.0/app-release.apk">
     <img src="https://img.shields.io/badge/Download-Latest%20APK-1B5E20?style=for-the-badge&logo=android&logoColor=white" alt="Download APK">
   </a>
   <br><br>

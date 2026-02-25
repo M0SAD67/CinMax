@@ -1,0 +1,168 @@
+name: CineMax
+description: "CineMax - Movies & TV Series App like Netflix"
+publish_to: 'none'
+
+version: 1.0.1+30
+
+environment:
+  sdk: ^3.10.4
+
+dependencies:
+  flutter:
+    sdk: flutter
+  
+  # Localization
+  flutter_localizations:
+    sdk: flutter
+  intl: any
+  
+  cupertino_icons: ^1.0.8
+  
+  # State Management
+  provider: ^6.1.2
+  
+  # API & Networking
+  dio: ^5.4.0
+  
+  # Local Database
+  sqflite: ^2.3.2
+  path_provider: ^2.1.2
+  
+  # Video Player
+  media_kit: ^1.1.10+1
+  media_kit_video: ^1.2.4
+  media_kit_libs_video: ^1.0.4
+  
+  # UI Components
+  cached_network_image: ^3.3.1
+  shimmer: ^3.0.0
+  carousel_slider: ^5.0.0
+  flutter_rating_bar: ^4.0.1
+  loading_indicator_m3e: ^0.1.0
+  m3e_design: ^0.1.0
+  
+  # Download & Storage
+  flutter_downloader: ^1.11.6
+  permission_handler: ^11.3.0
+  flutter_local_notifications: ^19.5.0
+  workmanager: ^0.9.0+3
+  
+  # Animations
+  lottie: ^3.1.0
+  dotlottie_loader: ^0.0.4
+  
+  # Icons
+  iconsax: ^0.0.8
+  
+  # YouTube Player for Trailers
+  #youtube_player_flutter: ^9.0.1
+  
+  # Shared Preferences for settings
+  shared_preferences: ^2.2.2
+  
+  
+  # Screen Brightness Control
+  screen_brightness: ^2.1.7
+  palette_generator: ^0.3.3+7
+  html: ^0.15.6
+  device_info_plus: ^12.3.0
+  subtitle: ^0.1.4
+  file_picker: ^10.3.8
+  marquee: ^2.3.0
+  encrypt: ^5.0.3
+  flutter_svg: ^2.2.3
+  sqflite_common_ffi: ^2.4.0+2
+  http: ^1.6.0
+  crypto: ^3.0.7
+  url_launcher: ^6.3.2
+  firebase_core: ^4.4.0
+  firebase_messaging: ^16.1.1
+  firebase_auth: ^6.1.4
+  font_awesome_flutter: ^10.12.0
+  flutter_animate: ^4.5.2
+  google_sign_in: ^6.2.1
+  cloud_firestore: ^6.1.2
+  pointycastle: ^3.9.1
+  google_generative_ai: ^0.4.6
+  flutter_native_splash: ^2.4.7
+  flutter_cache_manager: ^3.4.1
+  flutter_background_service: ^5.1.0
+  package_info_plus: ^9.0.0
+  open_filex: ^4.7.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+  flutter_launcher_icons: ^0.14.3
+
+# App Icon Configuration
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: "assets/icon/icon.png"
+  adaptive_icon_background: "#006969"
+  adaptive_icon_foreground: "assets/icon/icon.png"
+  min_sdk_android: 21
+
+flutter:
+  generate: true
+  uses-material-design: true
+  
+  assets:
+    - assets/images/
+    - assets/animations/
+    - assets/icon/
+    
+  fonts:
+    # Arabic Font - Cairo
+    - family: Cairo
+      fonts:
+        - asset: assets/fonts/Arabic/Cairo/Cairo-Regular.ttf
+        - asset: assets/fonts/Arabic/Cairo/Cairo-Light.ttf
+          weight: 300
+        - asset: assets/fonts/Arabic/Cairo/Cairo-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/Arabic/Cairo/Cairo-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/Arabic/Cairo/Cairo-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/Arabic/Cairo/Cairo-ExtraBold.ttf
+          weight: 800
+        - asset: assets/fonts/Arabic/Cairo/Cairo-Black.ttf
+          weight: 900
+          
+    # English Font - Roboto
+    - family: Roboto
+      fonts:
+        - asset: assets/fonts/English/Roboto/Roboto-Regular.ttf
+        - asset: assets/fonts/English/Roboto/Roboto-Light.ttf
+          weight: 300
+        - asset: assets/fonts/English/Roboto/Roboto-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/English/Roboto/Roboto-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/English/Roboto/Roboto-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/English/Roboto/Roboto-ExtraBold.ttf
+          weight: 800
+        - asset: assets/fonts/English/Roboto/Roboto-Black.ttf
+          weight: 900
+
+    # Arabic Font - Aref Ruqaa
+    - family: ArefRuqaa
+      fonts:
+        - asset: assets/fonts/Arabic/Aref_Ruqaa/ArefRuqaa-Regular.ttf
+        - asset: assets/fonts/Arabic/Aref_Ruqaa/ArefRuqaa-Bold.ttf
+          weight: 700
+
+    # English Font - Dancing Script
+    - family: DancingScript
+      fonts:
+        - asset: assets/fonts/English/DancingScript/DancingScript-Regular.ttf
+        - asset: assets/fonts/English/DancingScript/DancingScript-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/English/DancingScript/DancingScript-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/English/DancingScript/DancingScript-Bold.ttf
+          weight: 700

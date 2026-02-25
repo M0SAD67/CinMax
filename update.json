@@ -1,0 +1,10 @@
+{
+  "latest_version": "1.0.1",
+  "download_urls": {
+    "armeabi-v7a": "https://github.com/MohamedALDhshwry/CineMax/releases/download/v1.0.1/app-armeabi-v7a-release.apk",
+    "arm64-v8a": "https://github.com/MohamedALDhshwry/CineMax/releases/download/v1.0.1/app-arm64-v8a-release.apk",
+    "universal": "https://github.com/MohamedALDhshwry/CineMax/releases/download/v1.0.1/app-release.apk"
+  },
+  "release_notes": "✨ New Features:\n- Added in-app update downloading and installation.\n- Redesigned the Settings screen cards and buttons.\n- Built with optimized splits for v7 and v8 architectures.\n- Minor bug fixes and performance improvements.",
+  "force_update": false
+}

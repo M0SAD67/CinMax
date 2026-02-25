@@ -1,0 +1,69 @@
+<svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Metallic silver gradient -->
+    <linearGradient id="silverGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#e8e8e8;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#c0c0c0;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#a8a8a8;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Dark gradient for depth -->
+    <linearGradient id="darkGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0f0f1e;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Radial gradient for screen glow -->
+    <radialGradient id="screenGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#c0c0c0;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#1a1a2e;stop-opacity:0" />
+    </radialGradient>
+  </defs>
+  
+  <!-- Cinema Screen (rounded rectangle) -->
+  <rect x="120" y="150" width="160" height="100" rx="8" fill="url(#darkGrad)" stroke="url(#silverGrad)" stroke-width="3"/>
+  
+  <!-- Screen glow effect -->
+  <rect x="125" y="155" width="150" height="90" rx="6" fill="url(#screenGlow)"/>
+  
+  <!-- Elegant letter C in the center of the screen -->
+  <text x="200" y="215" font-family="Georgia, 'Times New Roman', serif" font-size="56" font-weight="300" fill="url(#silverGrad)" text-anchor="middle" letter-spacing="2">C</text>
+  
+  <!-- Luffy Straw Hat - Iconic One Piece Symbol -->
+  <g transform="translate(200, 140)">
+    <!-- Hat brim (wide circular base) -->
+    <ellipse cx="0" cy="0" rx="45" ry="12" fill="url(#darkGrad)" stroke="url(#silverGrad)" stroke-width="2"/>
+    
+    <!-- Hat crown (cone shape) -->
+    <path d="M -26,-4 Q -22,-35 0,-38 Q 22,-35 26,-4 Z" fill="url(#darkGrad)" stroke="url(#silverGrad)" stroke-width="2"/>
+    
+    <!-- Straw texture lines (horizontal) -->
+    <line x1="-24" y1="-6" x2="24" y2="-6" stroke="url(#silverGrad)" stroke-width="0.8" opacity="0.4"/>
+    <line x1="-21" y1="-12" x2="21" y2="-12" stroke="url(#silverGrad)" stroke-width="0.8" opacity="0.4"/>
+    <line x1="-18" y1="-18" x2="18" y2="-18" stroke="url(#silverGrad)" stroke-width="0.8" opacity="0.4"/>
+    <line x1="-14" y1="-24" x2="14" y2="-24" stroke="url(#silverGrad)" stroke-width="0.8" opacity="0.4"/>
+    <line x1="-9" y1="-30" x2="9" y2="-30" stroke="url(#silverGrad)" stroke-width="0.8" opacity="0.4"/>
+    
+    <!-- Red ribbon (iconic element) -->
+    <rect x="-28" y="-5" width="56" height="6" rx="1.5" fill="#8B0000" stroke="url(#silverGrad)" stroke-width="1.2" opacity="0.9"/>
+    
+    <!-- Ribbon shine effect -->
+    <rect x="-26" y="-4" width="52" height="1.5" rx="0.8" fill="url(#silverGrad)" opacity="0.3"/>
+  </g>
+  
+  <!-- Anime-inspired subtle star accent (top right of screen) -->
+  <g transform="translate(260, 165)">
+    <path d="M 0,-8 L 2,-2 L 8,0 L 2,2 L 0,8 L -2,2 L -8,0 L -2,-2 Z" fill="url(#silverGrad)" opacity="0.9"/>
+  </g>
+  
+  <!-- Film strip perforations on the sides (subtle detail) -->
+  <rect x="118" y="165" width="4" height="8" rx="1" fill="url(#silverGrad)" opacity="0.6"/>
+  <rect x="118" y="185" width="4" height="8" rx="1" fill="url(#silverGrad)" opacity="0.6"/>
+  <rect x="118" y="205" width="4" height="8" rx="1" fill="url(#silverGrad)" opacity="0.6"/>
+  <rect x="118" y="225" width="4" height="8" rx="1" fill="url(#silverGrad)" opacity="0.6"/>
+  
+  <rect x="278" y="165" width="4" height="8" rx="1" fill="url(#silverGrad)" opacity="0.6"/>
+  <rect x="278" y="185" width="4" height="8" rx="1" fill="url(#silverGrad)" opacity="0.6"/>
+  <rect x="278" y="205" width="4" height="8" rx="1" fill="url(#silverGrad)" opacity="0.6"/>
+  <rect x="278" y="225" width="4" height="8" rx="1" fill="url(#silverGrad)" opacity="0.6"/>
+</svg>

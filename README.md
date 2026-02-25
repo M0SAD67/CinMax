@@ -14,6 +14,19 @@
 </p>
 
 ---
+## � Download CineMax
+
+Get the latest version of CineMax for your Android device:
+
+<p align="center">
+  <a href="https://github.com/M0SAD67/CinMax/releases/latest">
+    <img src="https://img.shields.io/badge/Download-Latest%20APK-1B5E20?style=for-the-badge&logo=android&logoColor=white" alt="Download APK">
+  </a>
+  <br><br>
+  <a href="https://github.com/M0SAD67/CinMax/releases"><b>Browse all versions and changelogs on the Releases page</b></a>
+</p>
+
+---
 
 ## 📝 Project Overview
 **CineMax** is a high-performance streaming application built with Flutter, designed to offer a seamless experience for watching movies, TV shows, and anime. It integrates multiple sources from around the world, providing a Netflix-like interface with advanced features like Watch Parties and AI-powered recommendations.

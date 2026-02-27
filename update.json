@@ -4,7 +4,7 @@
     "armeabi-v7a": "https://github.com/M0SAD67/CinMax/releases/download/V1.0.1/app-armeabi-v7a-release.apk",
     "arm64-v8a": "https://github.com/M0SAD67/CinMax/releases/download/V1.0.1/app-arm64-v8a-release.apk",
     "universal": "https://github.com/M0SAD67/CinMax/releases/download/V1.0.1/app-release.apk"
-  }
+  },
   "release_notes": "✨ What is New in v1.0.1:\n\n🐛 Bug Fixes:\n- Fixed a download bug where closing and reopening the app would create a duplicate of the downloaded file.\n\n🌍 Localization:\n- Added translations for most text throughout the app.\n\n📖 Tutorials:\n- Added in-app tutorials to help users discover key features.\n\n⚡ Improvements:\n- Improved server selection to show recommended sources first for a better user experience.\n\n🎬 Content:\n- Added more sources for movies and series, along with new download sources.",
   "force_update": false
 }

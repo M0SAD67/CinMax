@@ -5,6 +5,6 @@
     "arm64-v8a": "https://github.com/M0SAD67/CinMax/releases/download/V1.0.1/app-arm64-v8a-release.apk",
     "universal": "https://github.com/M0SAD67/CinMax/releases/download/V1.0.1/app-release.apk"
   },
-  "release_notes": "✨ What is New in v1.0.1:\n\n🐛 Bug Fixes:\n- Fixed a download bug where closing and reopening the app would create a duplicate of the downloaded file.\n\n🌍 Localization:\n- Added translations for most text throughout the app.\n\n📖 Tutorials:\n- Added in-app tutorials to help users discover key features.\n\n⚡ Improvements:\n- Improved server selection to show recommended sources first for a better user experience.\n\n🎬 Content:\n- Added more sources for movies and series, along with new download sources.",
+  "release_notes": "✨ What's New in v1.1.0:\n\n🔔 Notifications:\n- Fixed notification bugs and improved the notifications settings button flow.\n\n🎬 Player Improvements:\n- Fixed annoying repetitive error messages during slow network connections or other playback issues.\n\n💎 New Features:\n- Added a new 'VIP Coming Soon' section.\n\n🛡️ Under the Hood:\n- Integrated a DNS inspection tool (to be activated in future updates) for better app stability.",
   "force_update": false
 }

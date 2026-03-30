@@ -1,10 +1,10 @@
 {
-  "latest_version": "1.1.0",
+  "latest_version": "1.2.1",
   "download_urls": {
-    "armeabi-v7a": "https://github.com/M0SAD67/CinMax/releases/download/V1.1.0/app-armeabi-v7a-release.apk",
-    "arm64-v8a": "https://github.com/M0SAD67/CinMax/releases/download/V1.1.0/app-arm64-v8a-release.apk",
-    "universal": "https://github.com/M0SAD67/CinMax/releases/download/V1.1.0/app-release.apk"
+    "armeabi-v7a": "https://github.com/M0SAD67/CinMax/releases/download/V1.2.1/CineMax-v7a-release.apk",
+    "arm64-v8a": "https://github.com/M0SAD67/CinMax/releases/download/V1.2.1/CineMax-v8a-release.apk",
+    "universal": "https://github.com/M0SAD67/CinMax/releases/download/V1.2.1/CineMax.apk"
   },
-  "release_notes": "✨ What's New in v1.1.0:\n\n🔔 Notifications:\n- Fixed notification bugs and improved the notifications settings button flow.\n\n🎬 Player Improvements:\n- Fixed annoying repetitive error messages during slow network connections or other playback issues.\n\n💎 New Features:\n- Added a new 'VIP Coming Soon' section.\n\n🛡️ Under the Hood:\n- Integrated a DNS inspection tool (to be activated in future updates) for better app stability.",
+  "release_notes": "✨ What's New in v1.2.1:\n\n🎨 UI & Experience:\n- Enhanced app interface with modern, smooth visual touches for a better and highly satisfying browsing experience.\n\n🤖 Smart Servers:\n- Rebuilt the Server Selection BottomSheet to automatically pick the most accurate result powered by a new customizable 'Match Probability' algorithm.\n\n📺 More Sources:\n- Integrated new and exclusive server sources to expand the watch library without playback interruptions.\n\n⚡ Performance & Fixes:\n- Crushed numerous bugs and optimized resource consumption to drastically eliminate lag, even on lower-end devices.\n- Modernized the 'App Update' screen interface to keep you rapidly updated with our latest features.",
   "force_update": true
 }

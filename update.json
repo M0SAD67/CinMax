@@ -1,10 +1,10 @@
 {
-  "latest_version": "1.2.1",
+  "latest_version": "1.3.0",
   "download_urls": {
-    "armeabi-v7a": "https://github.com/M0SAD67/CinMax/releases/download/V1.2.1/CineMax-v7a-release.apk",
-    "arm64-v8a": "https://github.com/M0SAD67/CinMax/releases/download/V1.2.1/CineMax-v8a-release.apk",
-    "universal": "https://github.com/M0SAD67/CinMax/releases/download/V1.2.1/CineMax.apk"
+    "armeabi-v7a": "https://github.com/M0SAD67/CinMax/releases/download/V1.3.0/CineMax-v7a-release.apk",
+    "arm64-v8a": "https://github.com/M0SAD67/CinMax/releases/download/V1.3.0/CineMax-v8a-release.apk",
+    "universal": "https://github.com/M0SAD67/CinMax/releases/download/V1.3.0/CineMax-v1.3.0.apk"
   },
-  "release_notes": "✨ What's New in v1.2.1:\n\n🎨 UI & Experience:\n- Enhanced app interface with modern, smooth visual touches for a better and highly satisfying browsing experience.\n\n🤖 Smart Servers:\n- Rebuilt the Server Selection BottomSheet to automatically pick the most accurate result powered by a new customizable 'Match Probability' algorithm.\n\n📺 More Sources:\n- Integrated new and exclusive server sources to expand the watch library without playback interruptions.\n\n⚡ Performance & Fixes:\n- Crushed numerous bugs and optimized resource consumption to drastically eliminate lag, even on lower-end devices.\n- Modernized the 'App Update' screen interface to keep you rapidly updated with our latest features.",
+  "release_notes": "🚀 What's New in v1.3.0:\n\n📺 New Sources & Fixes:\n- Added several new movie/anime sources and fixed existing ones for a more stable and diverse content library.\n\n🎬 New Video Player:\n- Introduced a brand new video player! You can now switch to the new player from the settings for an enhanced viewing experience.\n\n⚡ Extreme Performance:\n- Boosted Anime section loading speed by 70% using a new synchronized GraphQL fetch engine.\n\n✨ Premium UI (Skeleton Loading):\n- Introduced modern Shimmer-based skeletons for all content carousels to ensure a smooth, high-end visual experience during data loading.\n\n🎯 Smart Ad Recovery:\n- Added real-time ad synchronization. Ads now resume instantly the moment DNS protection is disabled without requiring an app restart.\n\n🛠 Critical Bug Fixes:\n- Fixed 'Continue Watching' logic to correctly track current seasons instead of resetting to season 1.\n- Resolved the 'Check for Updates' loading indicator freeze in Settings.\n\n🔒 Secure & Signed:\n- This version is officially signed with a secure keystore to ensure safe installation and better compatibility across all Android devices.",
   "force_update": true
 }

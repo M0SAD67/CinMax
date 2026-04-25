@@ -1,10 +1,10 @@
 {
-  "latest_version": "1.3.0",
+  "latest_version": "1.3.1",
   "download_urls": {
-    "armeabi-v7a": "https://github.com/M0SAD67/CinMax/releases/download/V1.3.0/CineMax-v7a-release.apk",
-    "arm64-v8a": "https://github.com/M0SAD67/CinMax/releases/download/V1.3.0/CineMax-v8a-release.apk",
-    "universal": "https://github.com/M0SAD67/CinMax/releases/download/V1.3.0/CineMax-v1.3.0.apk"
+    "armeabi-v7a": "https://github.com/M0SAD67/CinMax/releases/download/V1.3.1/CineMax-v7a-release.apk",
+    "arm64-v8a": "https://github.com/M0SAD67/CinMax/releases/download/V1.3.1/CineMax-v8a-release.apk",
+    "universal": "https://github.com/M0SAD67/CinMax/releases/download/V1.3.1/CineMax-v1.3.1.apk"
   },
-  "release_notes": "🚀 What's New in v1.3.0:\n\n📺 New Sources & Fixes:\n- Added several new movie/anime sources and fixed existing ones for a more stable and diverse content library.\n\n🎬 New Video Player:\n- Introduced a brand new video player! You can now switch to the new player from the settings for an enhanced viewing experience.\n\n⚡ Extreme Performance:\n- Boosted Anime section loading speed by 70% using a new synchronized GraphQL fetch engine.\n\n✨ Premium UI (Skeleton Loading):\n- Introduced modern Shimmer-based skeletons for all content carousels to ensure a smooth, high-end visual experience during data loading.\n\n🎯 Smart Ad Recovery:\n- Added real-time ad synchronization. Ads now resume instantly the moment DNS protection is disabled without requiring an app restart.\n\n🛠 Critical Bug Fixes:\n- Fixed 'Continue Watching' logic to correctly track current seasons instead of resetting to season 1.\n- Resolved the 'Check for Updates' loading indicator freeze in Settings.\n\n🔒 Secure & Signed:\n- This version is officially signed with a secure keystore to ensure safe installation and better compatibility across all Android devices.",
+  "release_notes": "🔧 CineMax v1.3.1: Bug Fixes & Improvements\n\n🏠 UI Enhancements:\n- Updated and polished the Home screen for a smoother and more fluid browsing experience.\n- Refined the Settings menu design for a more modern and user-friendly look.\n\n📺 Source Fixes:\n- Fixed and stabilized multiple movie and anime sources to ensure reliable content availability.\n- Actively working on resolving issues with remaining sources in upcoming patches.\n\n🛠 Technical Improvements:\n- Resolved critical internal import and navigation errors caused by the recent codebase reorganization.\n- Enhanced overall app stability and fixed performance issues identified in v1.3.0.\n\n🚀 Enjoy a smoother and more stable CineMax experience!",
   "force_update": true
 }

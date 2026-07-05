@@ -1,10 +1,10 @@
 {
-  "latest_version": "1.3.5",
+  "latest_version": "1.3.7",
   "download_urls": {
     "armeabi-v7a": "https://github.com/M0SAD67/CinMax/releases/download/v1.3.5/CineMax-v7a-release.apk",
     "arm64-v8a": "https://github.com/M0SAD67/CinMax/releases/download/v1.3.5/CineMax-v8a-release.apk",
     "universal": "https://github.com/M0SAD67/CinMax/releases/download/v1.3.5/CineMax-v1.3.5.apk"
   },
-  "release_notes": "🚀 What's New in v1.3.5:\n\n🔄 SIMKL Sync Integration:\n- Sync watch history, watchlist collections, and ratings with SIMKL. Includes a new login flow and settings controls.\n\n📊 Reworked Profile & Analytics:\n- Beautiful gradient stat cards, watch analytics, and optimized portrait/landscape layout designs.\n\n🌍 Dropped Watchlist & Translations:\n- Added 'Dropped' collection state and completed multi-language localizations across 9 languages.\n\n🚀 Interactive App Updates:\n- Revamped the update screen with an interactive drawing logo, glassmorphic layout, inline progress tracking, and background notifications.\n\n🛠 Technical Fixes:\n- Stabilized BabDrama, AnimeNoSub, and Movix sources with better Cloudflare bypass and quality selection controls.",
+  "release_notes": "🚀 What's New in v1.3.7:\n\n🔄 SIMKL Sync Integration:\n- Sync watch history, watchlist collections, and ratings with SIMKL. Includes a new login flow and settings controls.\n\n📊 Reworked Profile & Analytics:\n- Beautiful gradient stat cards, watch analytics, and optimized portrait/landscape layout designs.\n\n🌍 Dropped Watchlist & Translations:\n- Added 'Dropped' collection state and completed multi-language localizations across 9 languages.\n\n🚀 Interactive App Updates:\n- Revamped the update screen with an interactive drawing logo, glassmorphic layout, inline progress tracking, and background notifications.\n\n🛠 Technical Fixes:\n- Stabilized BabDrama, AnimeNoSub, and Movix sources with better Cloudflare bypass and quality selection controls.",
   "force_update": true
 }

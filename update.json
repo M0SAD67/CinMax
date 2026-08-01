@@ -1,10 +1,10 @@
 {
-  "latest_version": "1.4.0",
+  "latest_version": "1.5.0",
   "download_urls": {
-    "armeabi-v7a": "https://github.com/M0SAD67/CinMax/releases/download/V1.4.0/CineMax-v7a-release.apk",
-    "arm64-v8a": "https://github.com/M0SAD67/CinMax/releases/download/V1.4.0/CineMax-v8a-release.apk",
-    "universal": "https://github.com/M0SAD67/CinMax/releases/download/V1.4.0/CineMax-V1.4.0.apk"
+    "armeabi-v7a": "https://github.com/M0SAD67/CinMax/releases/download/V1.5.0/CineMax-v7a-release.apkk",
+    "arm64-v8a": "https://github.com/M0SAD67/CinMax/releases/download/V1.5.0/CineMax-v8a-release.apk",
+    "universal": "https://github.com/M0SAD67/CinMax/releases/download/V1.5.0/CineMax-V1.5.0.apk"
   },
-  "release_notes": "🚀 What's New in v1.4.0:\n\n🔄 SIMKL Sync Integration:\n- Sync watch history, watchlist collections, and ratings with SIMKL. Includes a new login flow and settings controls.\n\n📊 Reworked Profile & Analytics:\n- Beautiful gradient stat cards, watch analytics, and optimized portrait/landscape layout designs.\n\n🌍 Dropped Watchlist & Translations:\n- Added 'Dropped' collection state and completed multi-language localizations across 9 languages.\n\n🚀 Interactive App Updates:\n- Revamped the update screen with an interactive drawing logo, glassmorphic layout, inline progress tracking, and background notifications.\n\n🛠 Technical Fixes:\n- Stabilized BabDrama, AnimeNoSub, and Movix sources with better Cloudflare bypass and quality selection controls.",
+  "release_notes": "🚀 What's New in v1.5.0:\n\n🎨 App Identity Redesign & Improvements:\n- New app icon, logo, and animated launch screen for a polished first impression.\n- Fully redesigned settings page with a new layout and visual system.\n- Custom icons are being rolled out across the app in upcoming updates.\n\n⚡ Quick Play:\n- Automatically picks the best server for faster, smoother playback.\n- Manual server selection is still available whenever you want full control.\n\n🖥️ Redesigned Content Screens:\n- Details screen rebuilt from the ground up with manga download support.\n- Explore screen redesigned and anime screen updated for the new details layout.\n- Source selection screen now supports landscape mode.\n\n📚 Manga Mode Dock:\n- Redesigned dock with a dedicated manga mode entry point.\n\n▶️ Instant Continue Watching:\n- Tapping Continue Watching now opens the player directly to resume — no extra stop at the details screen.\n\n🛠 Technical Fixes:\n- Fixed incorrect season matching in anime search; improved overall match accuracy.\n- Fixed internet connectivity issue affecting content loading.\n- New setting under Anime & Sources to control parallel source search count — reduces lag on older devices.",
   "force_update": true
 }

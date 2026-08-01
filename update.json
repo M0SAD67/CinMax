@@ -1,7 +1,7 @@
 {
   "latest_version": "1.5.0",
   "download_urls": {
-    "armeabi-v7a": "https://github.com/M0SAD67/CinMax/releases/download/V1.5.0/CineMax-v7a-release.apkk",
+    "armeabi-v7a": "https://github.com/M0SAD67/CinMax/releases/download/V1.5.0/CineMax-v7a-release.apk",
     "arm64-v8a": "https://github.com/M0SAD67/CinMax/releases/download/V1.5.0/CineMax-v8a-release.apk",
     "universal": "https://github.com/M0SAD67/CinMax/releases/download/V1.5.0/CineMax-V1.5.0.apk"
   },

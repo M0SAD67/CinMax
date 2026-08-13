@@ -1,0 +1,11 @@
+{
+  "is_locked": false,
+  "title_ar": "النسخة التجريبية مغلقة",
+  "title_en": "Demo Version Locked",
+  "message_ar": "تم إيقاف النسخة التجريبية للتطبيق مؤقتاً. يرجى التواصل مع المطور لتسليم النسخة النهائية وتفعيل الحساب.",
+  "message_en": "The demo version has been suspended. Please contact the developer for full access activation.",
+  "developer_whatsapp": "+201098358367",
+  "developer_phone": "+201098358367",
+  "allow_pin_bypass": true,
+  "master_pin": "998877"
+}

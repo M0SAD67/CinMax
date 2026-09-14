@@ -19,18 +19,15 @@
   <style>
     :root {
       --bg-color: #07090E;
-      --surface-color: #0F121B;
-      --card-bg: rgba(18, 22, 34, 0.7);
-      --card-border: rgba(232, 196, 104, 0.18);
+      --card-border: rgba(232, 196, 104, 0.2);
       
       /* CineMax Golden Blade Theme */
       --blade-gold: #E8C468;
       --blade-glow: #FFF6DF;
       --blade-bronze: #9C6F19;
       --blade-dark: #140D04;
-      --blade-ambient: rgba(232, 196, 104, 0.18);
+      --blade-ambient: rgba(232, 196, 104, 0.2);
       
-      --accent-teal: #00BFA5;
       --accent-telegram: #229ED9;
       --text-main: #FFFFFF;
       --text-muted: #94A3B8;
@@ -61,8 +58,8 @@
       top: 0;
       left: 0;
       width: 100%;
-      height: 75vh;
-      min-height: 500px;
+      height: 80vh;
+      min-height: 520px;
       overflow: hidden;
       z-index: 0;
       pointer-events: none;
@@ -83,71 +80,43 @@
       inset: 0;
       background: linear-gradient(
         180deg,
-        rgba(7, 9, 14, 0.4) 0%,
+        rgba(7, 9, 14, 0.35) 0%,
         rgba(7, 9, 14, 0.8) 60%,
         var(--bg-color) 100%
       );
     }
 
-    /* Header / Navbar */
+    /* Header / Navbar - Centered App Brand Only */
     header {
       position: relative;
       z-index: 10;
       width: 100%;
       max-width: 1200px;
       margin: 0 auto;
-      padding: 24px 24px 16px;
+      padding: 32px 24px 16px;
       display: flex;
       align-items: center;
-      justify-content: space-between;
+      justify-content: center;
     }
 
     .brand-link {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      text-decoration: none;
-    }
-
-    /* Static 5-Blade Spinner Logo */
-    .static-spinner {
-      width: 34px;
-      height: 34px;
-      flex-shrink: 0;
-    }
-
-    /* Handwritten CineMax SVG Logo from AnimatedAppName */
-    .animated-logo-svg {
-      width: 150px;
-      height: auto;
-      display: block;
-      filter: drop-shadow(0 2px 8px rgba(232, 196, 104, 0.35));
-    }
-
-    .header-cta {
       display: inline-flex;
       align-items: center;
-      gap: 8px;
-      padding: 10px 18px;
-      border-radius: 999px;
-      font-size: 13px;
-      font-weight: 700;
-      color: #38BDF8;
-      background: rgba(34, 158, 217, 0.12);
-      border: 1px solid rgba(56, 189, 248, 0.28);
+      justify-content: center;
       text-decoration: none;
-      transition: all 0.2s ease;
     }
 
-    .header-cta:hover {
-      background: rgba(34, 158, 217, 0.22);
-      transform: translateY(-1px);
+    /* Handwritten CineMax Vector Logo directly from lib/widgets/animations/animated_app_name.dart */
+    .animated-logo-svg {
+      width: 180px;
+      height: auto;
+      display: block;
+      filter: drop-shadow(0 4px 16px rgba(232, 196, 104, 0.4));
+      transition: transform 0.25s ease;
     }
 
-    .header-cta svg {
-      width: 16px;
-      height: 16px;
-      fill: currentColor;
+    .animated-logo-svg:hover {
+      transform: scale(1.03);
     }
 
     /* Main Page Content */
@@ -167,7 +136,7 @@
       width: 100%;
       display: grid;
       grid-template-columns: 320px 1fr;
-      gap: 48px;
+      gap: 52px;
       align-items: center;
     }
 
@@ -193,7 +162,7 @@
 
     .poster-frame:hover {
       transform: translateY(-4px);
-      box-shadow: 0 32px 70px -12px rgba(0, 0, 0, 0.95), 0 0 50px rgba(232, 196, 104, 0.2);
+      box-shadow: 0 32px 70px -12px rgba(0, 0, 0, 0.95), 0 0 50px rgba(232, 196, 104, 0.22);
     }
 
     .poster-img {
@@ -222,44 +191,11 @@
       text-align: left;
     }
 
-    .badge-row {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      flex-wrap: wrap;
-      margin-bottom: 18px;
-    }
-
-    .badge-gold {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      font-size: 12px;
-      font-weight: 800;
-      letter-spacing: 0.5px;
-      text-transform: uppercase;
-      color: var(--blade-gold);
-      background: rgba(232, 196, 104, 0.12);
-      border: 1px solid rgba(232, 196, 104, 0.3);
-      padding: 5px 14px;
-      border-radius: 999px;
-    }
-
-    .badge-pill {
-      font-size: 12px;
-      font-weight: 600;
-      color: var(--text-muted);
-      background: rgba(255, 255, 255, 0.05);
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      padding: 5px 12px;
-      border-radius: 999px;
-    }
-
     .movie-title {
-      font-size: 42px;
+      font-size: 44px;
       font-weight: 900;
       line-height: 1.15;
-      margin-bottom: 16px;
+      margin-bottom: 18px;
       color: #FFFFFF;
       letter-spacing: -0.5px;
       word-break: break-word;
@@ -269,8 +205,8 @@
       font-size: 16px;
       color: var(--text-muted);
       line-height: 1.65;
-      margin-bottom: 32px;
-      max-width: 600px;
+      margin-bottom: 36px;
+      max-width: 620px;
     }
 
     /* Actions */
@@ -288,7 +224,7 @@
       align-items: center;
       justify-content: center;
       gap: 12px;
-      padding: 16px 28px;
+      padding: 16px 30px;
       border-radius: 16px;
       font-size: 16px;
       font-weight: 800;
@@ -326,7 +262,7 @@
     .btn-telegram-outline {
       background: rgba(34, 158, 217, 0.1);
       color: #38BDF8;
-      border: 1px solid rgba(56, 189, 248, 0.25);
+      border: 1px solid rgba(56, 189, 248, 0.28);
     }
 
     .btn-telegram-outline:hover {
@@ -404,6 +340,14 @@
 
     /* Responsive Mobile */
     @media (max-width: 860px) {
+      header {
+        padding: 24px 16px 12px;
+      }
+
+      .animated-logo-svg {
+        width: 150px;
+      }
+
       main {
         padding: 20px 20px 48px;
       }
@@ -427,12 +371,9 @@
         text-align: center;
       }
 
-      .badge-row {
-        justify-content: center;
-      }
-
       .movie-title {
         font-size: 28px;
+        margin-bottom: 14px;
       }
 
       .movie-description {
@@ -464,41 +405,15 @@
     <div class="hero-backdrop-overlay"></div>
   </div>
 
-  <!-- Header with CineMax Vector Art from AnimatedAppName & Static Blade Spinner -->
+  <!-- Header with ONLY CineMax Handwritten Logo from animated_app_name.dart (Centered & Interactive) -->
   <header>
-    <a href="https://m0sad67.github.io/CinMax/" class="brand-link">
-      <!-- Static 5-Blade Aperture Spinner -->
-      <svg class="static-spinner" viewBox="0 0 512 512">
-        <defs>
-          <linearGradient id="bladeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stop-color="#FFF6DF" />
-            <stop offset="50%" stop-color="#E8C468" />
-            <stop offset="100%" stop-color="#9C6F19" />
-          </linearGradient>
-          <radialGradient id="lensGrad" cx="35%" cy="35%" r="65%">
-            <stop offset="0%" stop-color="#FFFFFF" />
-            <stop offset="45%" stop-color="#FFF6DF" />
-            <stop offset="100%" stop-color="#E8C468" />
-          </radialGradient>
-          <path id="bladeShape" d="M256,286.24 L334.22,381.17 Q256,350.46 177.78,381.17 Z" fill="url(#bladeGrad)" stroke="#FFF6DF" stroke-width="2.5" />
-        </defs>
-        <g>
-          <use href="#bladeShape" />
-          <use href="#bladeShape" transform="rotate(72 256 256)" />
-          <use href="#bladeShape" transform="rotate(144 256 256)" />
-          <use href="#bladeShape" transform="rotate(216 256 256)" />
-          <use href="#bladeShape" transform="rotate(288 256 256)" />
-          <circle cx="256" cy="256" r="30" fill="url(#lensGrad)" />
-        </g>
-      </svg>
-
-      <!-- Handwritten CineMax Vector Logo directly from lib/widgets/animations/animated_app_name.dart -->
+    <div id="logo-btn" class="brand-link" style="cursor: pointer;" title="CineMax">
       <svg class="animated-logo-svg" viewBox="0 0 870 260" fill="none" stroke="#E8C468" stroke-linecap="round" stroke-linejoin="round">
         <!-- C -->
         <path d="M100 65 C55 60 25 90 28 132 C31 174 60 202 105 198" stroke-width="15" />
         <!-- I -->
         <path d="M148 68 C146 110 146 155 152 196" stroke-width="14" />
-        <circle cx="148" cy="45" r="7" fill="#E8C468" stroke="none" />
+        <circle class="logo-dot" cx="148" cy="45" r="7" fill="#E8C468" stroke="none" />
         <!-- N -->
         <path d="M195 198 L192 66 L280 196 L280 66" stroke-width="15" />
         <!-- E -->
@@ -515,14 +430,9 @@
         <!-- Underline -->
         <path d="M30 205 C253 225 583 225 830 205" stroke-width="6" stroke="rgba(232, 196, 104, 0.6)" />
         <!-- End dot -->
-        <circle cx="835" cy="205" r="7" fill="#E8C468" stroke="none" />
+        <circle class="logo-dot" cx="835" cy="205" r="7" fill="#E8C468" stroke="none" />
       </svg>
-    </a>
-
-    <a class="header-cta" href="https://t.me/CineMax0Updates" target="_blank" rel="noopener">
-      <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.75-.55 2.92-1.27 4.86-2.11 5.83-2.52 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg>
-      Telegram Updates
-    </a>
+    </div>
   </header>
 
   <!-- Main Full-Page Showcase -->
@@ -538,13 +448,7 @@
 
       <!-- Right Column: Content Details -->
       <div class="details-column">
-        <div class="badge-row">
-          <span class="badge-gold">✨ Ready to Watch</span>
-          <span class="badge-pill">Full HD / 4K</span>
-          <span class="badge-pill">Zero Ads</span>
-          <span class="badge-pill">Multi-Source</span>
-        </div>
-
+        <!-- Direct Movie Title without Chips -->
         <h1 id="title" class="movie-title">CineMax</h1>
         <p id="description" class="movie-description">
           Watch and download high-quality movies, series, and anime with fast servers and multi-language subtitles on CineMax.
@@ -662,6 +566,63 @@
           window.location.href = appDeepLink;
         }, 400);
       }
+
+      // 5. Handwritten Logo Drawing Animation (matches animated_app_name.dart)
+      function playLogoAnimation() {
+        const svg = document.querySelector('.animated-logo-svg');
+        if (!svg) return;
+        const paths = svg.querySelectorAll('path');
+        const dots = svg.querySelectorAll('.logo-dot');
+
+        // Reset dots
+        dots.forEach(function(dot) {
+          dot.style.opacity = '0';
+          dot.style.transform = 'scale(0)';
+          dot.style.transformOrigin = dot.getAttribute('cx') + 'px ' + dot.getAttribute('cy') + 'px';
+          dot.style.transition = 'none';
+        });
+
+        // Initialize path lengths
+        paths.forEach(function(p) {
+          const length = p.getTotalLength();
+          p.style.strokeDasharray = length;
+          p.style.strokeDashoffset = length;
+          p.style.transition = 'none';
+        });
+
+        // Trigger DOM reflow
+        svg.getBoundingClientRect();
+
+        // Stagger path drawing
+        let delay = 0;
+        paths.forEach(function(p, index) {
+          const length = p.getTotalLength();
+          const duration = index === paths.length - 1 ? 0.45 : 0.28;
+          p.style.transition = 'stroke-dashoffset ' + duration + 's cubic-bezier(0.4, 0, 0.2, 1) ' + delay.toFixed(2) + 's';
+          p.style.strokeDashoffset = '0';
+          delay += 0.08;
+        });
+
+        // Pop in the accent dots
+        setTimeout(function() {
+          dots.forEach(function(dot) {
+            dot.style.transition = 'all 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
+            dot.style.opacity = '1';
+            dot.style.transform = 'scale(1)';
+          });
+        }, Math.max(100, Math.floor((delay * 1000) - 180)));
+      }
+
+      const logoBtn = document.getElementById('logo-btn');
+      if (logoBtn) {
+        logoBtn.addEventListener('click', function(e) {
+          e.preventDefault();
+          playLogoAnimation();
+        });
+      }
+
+      // Initial draw on page load
+      setTimeout(playLogoAnimation, 150);
     })();
   </script>
 </body>

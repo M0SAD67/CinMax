@@ -3,6 +3,23 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script>
+    // Instant zero-latency redirect for mobile devices before DOM/CSS parsing
+    (function() {
+      try {
+        var search = window.location.search;
+        if (search) {
+          var match = search.match(/[?&]d=([^&]+)/);
+          if (match && match[1]) {
+            var isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+            if (isMobile) {
+              window.location.href = "cinemax://details?d=" + match[1];
+            }
+          }
+        }
+      } catch (e) {}
+    })();
+  </script>
   <title>CineMax - Watch & Download</title>
   
   <meta name="description" content="Watch and download movies, series, and anime in high quality on CineMax." />

@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CineMax - Stream & Download</title>
+  <title>CineMax - Watch & Download</title>
   
   <meta name="description" content="Watch and download movies, series, and anime in high quality on CineMax." />
   <meta property="og:site_name" content="CineMax" />
-  <meta property="og:title" id="og-title" content="CineMax - Stream & Download" />
+  <meta property="og:title" id="og-title" content="CineMax - Watch & Download" />
   <meta property="og:description" id="og-desc" content="Watch and download in high quality on CineMax." />
   <meta property="og:image" id="og-image" content="https://m0sad67.github.io/CinMax/assets/icon.png" />
-  <meta name="theme-color" content="#0B0F19" />
+  <meta name="theme-color" content="#07090E" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,10 +19,17 @@
   <style>
     :root {
       --bg-color: #07090E;
-      --card-bg: rgba(18, 24, 38, 0.7);
-      --card-border: rgba(255, 255, 255, 0.08);
-      --primary: #E50914;
-      --primary-glow: rgba(229, 9, 20, 0.4);
+      --card-bg: rgba(18, 20, 28, 0.78);
+      --card-border: rgba(232, 196, 104, 0.16);
+      
+      /* CineMax Golden Blade Theme */
+      --blade-gold: #E8C468;
+      --blade-glow: #FFF6DF;
+      --blade-bronze: #9C6F19;
+      --blade-dark: #140D04;
+      --blade-glow-ambient: rgba(232, 196, 104, 0.25);
+      
+      --accent-teal: #00BFA5;
       --accent-telegram: #229ED9;
       --text-main: #FFFFFF;
       --text-muted: #94A3B8;
@@ -49,19 +56,19 @@
       position: relative;
     }
 
-    /* Ambient Background Glow */
+    /* Ambient Background Glow (Golden Blade) */
     .bg-glow {
       position: fixed;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      width: 500px;
-      height: 500px;
-      background: radial-gradient(circle, var(--primary-glow) 0%, rgba(7, 9, 14, 0) 70%);
+      width: 520px;
+      height: 520px;
+      background: radial-gradient(circle, var(--blade-glow-ambient) 0%, rgba(0, 191, 165, 0.08) 40%, rgba(7, 9, 14, 0) 70%);
       filter: blur(80px);
       z-index: 0;
       pointer-events: none;
-      opacity: 0.6;
+      opacity: 0.7;
       transition: background 0.5s ease;
     }
 
@@ -72,7 +79,7 @@
       width: 100vw;
       height: 100vh;
       object-fit: cover;
-      filter: blur(40px) brightness(0.25);
+      filter: blur(45px) brightness(0.22);
       z-index: 0;
       pointer-events: none;
       transition: opacity 0.6s ease;
@@ -85,13 +92,13 @@
       width: 100%;
       max-width: 440px;
       background: var(--card-bg);
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
       border: 1px solid var(--card-border);
       border-radius: 28px;
       padding: 32px 24px;
       text-align: center;
-      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7), 0 0 0 1px rgba(255, 255, 255, 0.05);
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.8), 0 0 30px rgba(232, 196, 104, 0.08);
       animation: fadeIn 0.6s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
@@ -100,36 +107,49 @@
       to { opacity: 1; transform: translateY(0) scale(1); }
     }
 
-    /* App Brand Header */
+    /* App Brand Header with 5-Blade Spinner */
     .brand {
       display: inline-flex;
       align-items: center;
       gap: 10px;
       margin-bottom: 24px;
-      padding: 6px 16px;
-      background: rgba(255, 255, 255, 0.05);
-      border: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 7px 18px 7px 12px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(232, 196, 104, 0.2);
       border-radius: 999px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     }
 
-    .brand-logo {
-      width: 20px;
-      height: 20px;
-      background: var(--primary);
-      border-radius: 6px;
+    .brand-spinner-wrapper {
+      width: 26px;
+      height: 26px;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-weight: 800;
-      font-size: 11px;
-      color: #fff;
+    }
+
+    .brand-spinner {
+      width: 100%;
+      height: 100%;
+      overflow: visible;
+    }
+
+    @keyframes bladeSpin {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    .spinning-iris {
+      transform-origin: 256px 256px;
+      animation: bladeSpin 9s linear infinite;
     }
 
     .brand-name {
-      font-size: 13px;
-      font-weight: 700;
-      letter-spacing: 0.5px;
-      color: #F8FAFC;
+      font-size: 14px;
+      font-weight: 800;
+      letter-spacing: 1.2px;
+      color: var(--blade-glow);
+      text-shadow: 0 0 12px rgba(232, 196, 104, 0.4);
     }
 
     /* Poster */
@@ -140,7 +160,7 @@
       margin: 0 auto 20px;
       border-radius: 18px;
       overflow: hidden;
-      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(255, 255, 255, 0.1);
+      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.7), 0 0 0 1px rgba(232, 196, 104, 0.2);
       background: #111827;
     }
 
@@ -160,7 +180,7 @@
       align-items: center;
       justify-content: center;
       font-size: 40px;
-      background: linear-gradient(135deg, #1E293B, #0F172A);
+      background: linear-gradient(135deg, #1A1813, #0F0E0B);
     }
 
     /* Title & Meta */
@@ -183,13 +203,14 @@
     .status-badge {
       display: inline-block;
       font-size: 12px;
-      font-weight: 600;
-      color: #10B981;
-      background: rgba(16, 185, 129, 0.12);
-      border: 1px solid rgba(16, 185, 129, 0.25);
-      padding: 4px 12px;
+      font-weight: 700;
+      color: var(--blade-gold);
+      background: rgba(232, 196, 104, 0.12);
+      border: 1px solid rgba(232, 196, 104, 0.28);
+      padding: 4px 14px;
       border-radius: 999px;
       margin-bottom: 18px;
+      box-shadow: 0 2px 8px rgba(232, 196, 104, 0.15);
     }
 
     /* Action Buttons */
@@ -212,33 +233,32 @@
       text-decoration: none;
       cursor: pointer;
       border: none;
-      transition: all 0.2s ease;
+      transition: all 0.25s ease;
     }
 
-    .btn-primary {
-      background: linear-gradient(135deg, #E50914, #B80610);
-      color: #FFFFFF;
-      box-shadow: 0 8px 24px rgba(229, 9, 20, 0.35);
+    /* 3D Golden Blade Button */
+    .btn-blade {
+      background: linear-gradient(135deg, #FFF6DF 0%, #E8C468 45%, #9C6F19 100%);
+      color: var(--blade-dark);
+      font-weight: 800;
+      letter-spacing: 0.3px;
+      box-shadow: 0 8px 24px rgba(232, 196, 104, 0.35), inset 0 1px 1px rgba(255, 255, 255, 0.6);
+      border: 1px solid rgba(255, 246, 223, 0.4);
     }
 
-    .btn-primary:hover {
+    .btn-blade:hover {
       transform: translateY(-2px);
-      box-shadow: 0 12px 28px rgba(229, 9, 20, 0.5);
+      box-shadow: 0 12px 28px rgba(232, 196, 104, 0.5), inset 0 1px 1px rgba(255, 255, 255, 0.8);
+      filter: brightness(1.04);
     }
 
-    .btn-primary:active {
+    .btn-blade:active {
       transform: translateY(0);
+      filter: brightness(0.96);
     }
 
-    .btn-secondary {
-      background: rgba(255, 255, 255, 0.06);
-      color: #F1F5F9;
-      border: 1px solid rgba(255, 255, 255, 0.12);
-    }
-
-    .btn-secondary:hover {
-      background: rgba(255, 255, 255, 0.1);
-      border-color: rgba(255, 255, 255, 0.2);
+    .btn-blade svg {
+      fill: var(--blade-dark);
     }
 
     .btn-telegram {
@@ -249,23 +269,24 @@
 
     .btn-telegram:hover {
       background: rgba(34, 158, 217, 0.2);
+      border-color: rgba(56, 189, 248, 0.4);
     }
 
     .btn svg {
       width: 18px;
       height: 18px;
-      fill: currentColor;
+      flex-shrink: 0;
     }
 
     .footer-note {
       margin-top: 24px;
       font-size: 12px;
-      color: #64748B;
+      color: #717A8C;
+      line-height: 1.5;
     }
 
-    .footer-note a {
-      color: #94A3B8;
-      text-decoration: none;
+    .footer-note strong {
+      color: var(--blade-glow);
     }
   </style>
 </head>
@@ -276,9 +297,33 @@
   <img id="bg-blur" class="backdrop-blur-img" alt="" />
 
   <div class="container">
-    <!-- Brand -->
+    <!-- CineMax Brand Header with Signature 5-Blade Spinner -->
     <div class="brand">
-      <div class="brand-logo">C</div>
+      <div class="brand-spinner-wrapper">
+        <svg class="brand-spinner" viewBox="0 0 512 512">
+          <defs>
+            <linearGradient id="bladeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#FFF6DF" />
+              <stop offset="50%" stop-color="#E8C468" />
+              <stop offset="100%" stop-color="#9C6F19" />
+            </linearGradient>
+            <radialGradient id="lensGrad" cx="35%" cy="35%" r="65%">
+              <stop offset="0%" stop-color="#FFFFFF" />
+              <stop offset="45%" stop-color="#FFF6DF" />
+              <stop offset="100%" stop-color="#E8C468" />
+            </radialGradient>
+            <path id="bladeShape" d="M256,286.24 L334.22,381.17 Q256,350.46 177.78,381.17 Z" fill="url(#bladeGrad)" stroke="#FFF6DF" stroke-width="3" stroke-opacity="0.9" />
+          </defs>
+          <g class="spinning-iris">
+            <use href="#bladeShape" />
+            <use href="#bladeShape" transform="rotate(72 256 256)" />
+            <use href="#bladeShape" transform="rotate(144 256 256)" />
+            <use href="#bladeShape" transform="rotate(216 256 256)" />
+            <use href="#bladeShape" transform="rotate(288 256 256)" />
+            <circle cx="256" cy="256" r="32" fill="url(#lensGrad)" />
+          </g>
+        </svg>
+      </div>
       <div class="brand-name">CINEMAX</div>
     </div>
 
@@ -290,12 +335,12 @@
 
     <!-- Title & Description -->
     <h1 id="title" class="title">CineMax</h1>
-    <div id="status-badge" class="status-badge" style="display: none;">Ready to Stream</div>
+    <div id="status-badge" class="status-badge" style="display: none;">Ready to Watch</div>
     <p id="subtitle" class="subtitle">Watch and download high-quality movies, series, and anime without ads.</p>
 
     <!-- Buttons -->
     <div class="btn-group">
-      <a id="open-app-btn" class="btn btn-primary" href="#">
+      <a id="open-app-btn" class="btn btn-blade" href="#">
         <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
         Open in CineMax App
       </a>
@@ -350,7 +395,7 @@
           document.title = title + " - CineMax";
           document.getElementById('title').textContent = title;
           document.getElementById('status-badge').style.display = 'inline-block';
-          document.getElementById('subtitle').textContent = "Stream or download \"" + title + "\" on CineMax.";
+          document.getElementById('subtitle').textContent = "Watch and download \"" + title + "\" on CineMax.";
 
           if (poster && poster.startsWith('http')) {
             const posterEl = document.getElementById('poster');
@@ -362,7 +407,7 @@
               posterEl.style.display = 'block';
               posterFallback.style.display = 'none';
               bgBlur.src = poster;
-              bgBlur.style.opacity = '0.4';
+              bgBlur.style.opacity = '0.35';
             };
             posterEl.onerror = function() {
               posterEl.style.display = 'none';

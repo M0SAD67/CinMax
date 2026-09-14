@@ -14,25 +14,27 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
   <style>
     :root {
       --bg-color: #07090E;
-      --card-bg: rgba(18, 20, 28, 0.78);
-      --card-border: rgba(232, 196, 104, 0.16);
+      --surface-color: #0F121B;
+      --card-bg: rgba(18, 22, 34, 0.7);
+      --card-border: rgba(232, 196, 104, 0.18);
       
       /* CineMax Golden Blade Theme */
       --blade-gold: #E8C468;
       --blade-glow: #FFF6DF;
       --blade-bronze: #9C6F19;
       --blade-dark: #140D04;
-      --blade-glow-ambient: rgba(232, 196, 104, 0.25);
+      --blade-ambient: rgba(232, 196, 104, 0.18);
       
       --accent-teal: #00BFA5;
       --accent-telegram: #229ED9;
       --text-main: #FFFFFF;
       --text-muted: #94A3B8;
+      --text-sub: #64748B;
     }
 
     * {
@@ -49,127 +51,156 @@
       min-height: 100vh;
       display: flex;
       flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding: 24px 16px;
       overflow-x: hidden;
       position: relative;
     }
 
-    /* Ambient Background Glow (Golden Blade) */
-    .bg-glow {
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 520px;
-      height: 520px;
-      background: radial-gradient(circle, var(--blade-glow-ambient) 0%, rgba(0, 191, 165, 0.08) 40%, rgba(7, 9, 14, 0) 70%);
-      filter: blur(80px);
-      z-index: 0;
-      pointer-events: none;
-      opacity: 0.7;
-      transition: background 0.5s ease;
-    }
-
-    .backdrop-blur-img {
-      position: fixed;
+    /* Ambient Dynamic Backdrop */
+    .hero-backdrop-container {
+      position: absolute;
       top: 0;
       left: 0;
-      width: 100vw;
-      height: 100vh;
-      object-fit: cover;
-      filter: blur(45px) brightness(0.22);
+      width: 100%;
+      height: 75vh;
+      min-height: 500px;
+      overflow: hidden;
       z-index: 0;
       pointer-events: none;
-      transition: opacity 0.6s ease;
-      opacity: 0;
     }
 
-    .container {
+    .hero-backdrop-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: blur(55px) brightness(0.24);
+      transform: scale(1.1);
+      opacity: 0;
+      transition: opacity 0.8s ease;
+    }
+
+    .hero-backdrop-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        180deg,
+        rgba(7, 9, 14, 0.4) 0%,
+        rgba(7, 9, 14, 0.8) 60%,
+        var(--bg-color) 100%
+      );
+    }
+
+    /* Header / Navbar */
+    header {
+      position: relative;
+      z-index: 10;
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 24px 24px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .brand-link {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      text-decoration: none;
+    }
+
+    /* Static 5-Blade Spinner Logo */
+    .static-spinner {
+      width: 34px;
+      height: 34px;
+      flex-shrink: 0;
+    }
+
+    /* Handwritten CineMax SVG Logo from AnimatedAppName */
+    .animated-logo-svg {
+      width: 150px;
+      height: auto;
+      display: block;
+      filter: drop-shadow(0 2px 8px rgba(232, 196, 104, 0.35));
+    }
+
+    .header-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 18px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 700;
+      color: #38BDF8;
+      background: rgba(34, 158, 217, 0.12);
+      border: 1px solid rgba(56, 189, 248, 0.28);
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+
+    .header-cta:hover {
+      background: rgba(34, 158, 217, 0.22);
+      transform: translateY(-1px);
+    }
+
+    .header-cta svg {
+      width: 16px;
+      height: 16px;
+      fill: currentColor;
+    }
+
+    /* Main Page Content */
+    main {
       position: relative;
       z-index: 1;
       width: 100%;
-      max-width: 440px;
-      background: var(--card-bg);
-      backdrop-filter: blur(24px);
-      -webkit-backdrop-filter: blur(24px);
-      border: 1px solid var(--card-border);
-      border-radius: 28px;
-      padding: 32px 24px;
-      text-align: center;
-      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.8), 0 0 30px rgba(232, 196, 104, 0.08);
-      animation: fadeIn 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px) scale(0.98); }
-      to { opacity: 1; transform: translateY(0) scale(1); }
-    }
-
-    /* App Brand Header with 5-Blade Spinner */
-    .brand {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      margin-bottom: 24px;
-      padding: 7px 18px 7px 12px;
-      background: rgba(255, 255, 255, 0.04);
-      border: 1px solid rgba(232, 196, 104, 0.2);
-      border-radius: 999px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-    }
-
-    .brand-spinner-wrapper {
-      width: 26px;
-      height: 26px;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 40px 24px 60px;
+      flex: 1;
       display: flex;
       align-items: center;
-      justify-content: center;
     }
 
-    .brand-spinner {
+    .content-grid {
       width: 100%;
-      height: 100%;
-      overflow: visible;
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 48px;
+      align-items: center;
     }
 
-    @keyframes bladeSpin {
-      from { transform: rotate(0deg); }
-      to { transform: rotate(360deg); }
+    /* Poster Section */
+    .poster-column {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
-    .spinning-iris {
-      transform-origin: 256px 256px;
-      animation: bladeSpin 9s linear infinite;
-    }
-
-    .brand-name {
-      font-size: 14px;
-      font-weight: 800;
-      letter-spacing: 1.2px;
-      color: var(--blade-glow);
-      text-shadow: 0 0 12px rgba(232, 196, 104, 0.4);
-    }
-
-    /* Poster */
-    .poster-wrapper {
+    .poster-frame {
       position: relative;
-      width: 160px;
-      height: 240px;
-      margin: 0 auto 20px;
-      border-radius: 18px;
+      width: 100%;
+      max-width: 320px;
+      aspect-ratio: 2 / 3;
+      border-radius: 24px;
       overflow: hidden;
-      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.7), 0 0 0 1px rgba(232, 196, 104, 0.2);
-      background: #111827;
+      background: #121622;
+      border: 1px solid var(--card-border);
+      box-shadow: 0 24px 60px -12px rgba(0, 0, 0, 0.9), 0 0 40px rgba(232, 196, 104, 0.12);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .poster-frame:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 32px 70px -12px rgba(0, 0, 0, 0.95), 0 0 50px rgba(232, 196, 104, 0.2);
     }
 
     .poster-img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      display: block;
-      transition: transform 0.4s ease;
+      display: none;
     }
 
     .poster-fallback {
@@ -179,182 +210,386 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      font-size: 40px;
-      background: linear-gradient(135deg, #1A1813, #0F0E0B);
+      font-size: 56px;
+      background: linear-gradient(135deg, #181C28, #0B0E17);
     }
 
-    /* Title & Meta */
-    .title {
-      font-size: 22px;
+    /* Details Column */
+    .details-column {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      text-align: left;
+    }
+
+    .badge-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 18px;
+    }
+
+    .badge-gold {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 12px;
       font-weight: 800;
-      line-height: 1.3;
-      margin-bottom: 8px;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      color: var(--blade-gold);
+      background: rgba(232, 196, 104, 0.12);
+      border: 1px solid rgba(232, 196, 104, 0.3);
+      padding: 5px 14px;
+      border-radius: 999px;
+    }
+
+    .badge-pill {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--text-muted);
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 5px 12px;
+      border-radius: 999px;
+    }
+
+    .movie-title {
+      font-size: 42px;
+      font-weight: 900;
+      line-height: 1.15;
+      margin-bottom: 16px;
       color: #FFFFFF;
+      letter-spacing: -0.5px;
       word-break: break-word;
     }
 
-    .subtitle {
-      font-size: 14px;
+    .movie-description {
+      font-size: 16px;
       color: var(--text-muted);
-      line-height: 1.5;
-      margin-bottom: 28px;
+      line-height: 1.65;
+      margin-bottom: 32px;
+      max-width: 600px;
     }
 
-    .status-badge {
-      display: inline-block;
-      font-size: 12px;
-      font-weight: 700;
-      color: var(--blade-gold);
-      background: rgba(232, 196, 104, 0.12);
-      border: 1px solid rgba(232, 196, 104, 0.28);
-      padding: 4px 14px;
-      border-radius: 999px;
-      margin-bottom: 18px;
-      box-shadow: 0 2px 8px rgba(232, 196, 104, 0.15);
-    }
-
-    /* Action Buttons */
-    .btn-group {
+    /* Actions */
+    .action-row {
       display: flex;
-      flex-direction: column;
-      gap: 12px;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      width: 100%;
+      margin-bottom: 24px;
     }
 
     .btn {
-      display: flex;
+      display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: 10px;
-      width: 100%;
-      padding: 15px 20px;
-      border-radius: 14px;
-      font-size: 15px;
-      font-weight: 700;
+      gap: 12px;
+      padding: 16px 28px;
+      border-radius: 16px;
+      font-size: 16px;
+      font-weight: 800;
       text-decoration: none;
       cursor: pointer;
       border: none;
-      transition: all 0.25s ease;
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
-    /* 3D Golden Blade Button */
-    .btn-blade {
+    /* Museum-Grade 3D Golden Blade Button */
+    .btn-blade-primary {
       background: linear-gradient(135deg, #FFF6DF 0%, #E8C468 45%, #9C6F19 100%);
       color: var(--blade-dark);
-      font-weight: 800;
-      letter-spacing: 0.3px;
-      box-shadow: 0 8px 24px rgba(232, 196, 104, 0.35), inset 0 1px 1px rgba(255, 255, 255, 0.6);
+      letter-spacing: 0.2px;
+      box-shadow: 0 10px 30px rgba(232, 196, 104, 0.35), inset 0 1px 1px rgba(255, 255, 255, 0.7);
       border: 1px solid rgba(255, 246, 223, 0.4);
     }
 
-    .btn-blade:hover {
+    .btn-blade-primary:hover {
       transform: translateY(-2px);
-      box-shadow: 0 12px 28px rgba(232, 196, 104, 0.5), inset 0 1px 1px rgba(255, 255, 255, 0.8);
-      filter: brightness(1.04);
+      box-shadow: 0 16px 36px rgba(232, 196, 104, 0.5), inset 0 1px 1px #FFFFFF;
+      filter: brightness(1.05);
     }
 
-    .btn-blade:active {
+    .btn-blade-primary:active {
       transform: translateY(0);
-      filter: brightness(0.96);
     }
 
-    .btn-blade svg {
+    .btn-blade-primary svg {
       fill: var(--blade-dark);
+      width: 20px;
+      height: 20px;
     }
 
-    .btn-telegram {
-      background: rgba(34, 158, 217, 0.12);
+    .btn-telegram-outline {
+      background: rgba(34, 158, 217, 0.1);
       color: #38BDF8;
       border: 1px solid rgba(56, 189, 248, 0.25);
     }
 
-    .btn-telegram:hover {
+    .btn-telegram-outline:hover {
       background: rgba(34, 158, 217, 0.2);
-      border-color: rgba(56, 189, 248, 0.4);
+      border-color: rgba(56, 189, 248, 0.45);
+      transform: translateY(-2px);
     }
 
-    .btn svg {
-      width: 18px;
-      height: 18px;
-      flex-shrink: 0;
+    .btn-telegram-outline svg {
+      fill: currentColor;
+      width: 20px;
+      height: 20px;
     }
 
-    .footer-note {
-      margin-top: 24px;
-      font-size: 12px;
-      color: #717A8C;
-      line-height: 1.5;
+    .redirect-note {
+      font-size: 13px;
+      color: var(--text-sub);
+      display: flex;
+      align-items: center;
+      gap: 8px;
     }
 
-    .footer-note strong {
+    .redirect-note strong {
       color: var(--blade-glow);
+    }
+
+    /* App Perks Row */
+    .perks-container {
+      margin-top: 36px;
+      padding-top: 28px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    .perk-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 13px;
+      color: var(--text-muted);
+      font-weight: 600;
+    }
+
+    .perk-icon {
+      width: 20px;
+      height: 20px;
+      border-radius: 6px;
+      background: rgba(232, 196, 104, 0.15);
+      color: var(--blade-gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+    }
+
+    /* Footer */
+    footer {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      padding: 24px;
+      text-align: center;
+      font-size: 13px;
+      color: var(--text-sub);
+    }
+
+    footer a {
+      color: var(--blade-gold);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    /* Responsive Mobile */
+    @media (max-width: 860px) {
+      main {
+        padding: 20px 20px 48px;
+      }
+
+      .content-grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+        text-align: center;
+      }
+
+      .poster-column {
+        width: 100%;
+      }
+
+      .poster-frame {
+        max-width: 220px;
+      }
+
+      .details-column {
+        align-items: center;
+        text-align: center;
+      }
+
+      .badge-row {
+        justify-content: center;
+      }
+
+      .movie-title {
+        font-size: 28px;
+      }
+
+      .movie-description {
+        font-size: 15px;
+        margin-bottom: 24px;
+      }
+
+      .action-row {
+        flex-direction: column;
+        width: 100%;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      .perks-container {
+        justify-content: center;
+        gap: 16px;
+      }
     }
   </style>
 </head>
 <body>
 
-  <!-- Ambient background glow & blurred backdrop -->
-  <div class="bg-glow"></div>
-  <img id="bg-blur" class="backdrop-blur-img" alt="" />
-
-  <div class="container">
-    <!-- CineMax Brand Header with Signature 5-Blade Spinner -->
-    <div class="brand">
-      <div class="brand-spinner-wrapper">
-        <svg class="brand-spinner" viewBox="0 0 512 512">
-          <defs>
-            <linearGradient id="bladeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stop-color="#FFF6DF" />
-              <stop offset="50%" stop-color="#E8C468" />
-              <stop offset="100%" stop-color="#9C6F19" />
-            </linearGradient>
-            <radialGradient id="lensGrad" cx="35%" cy="35%" r="65%">
-              <stop offset="0%" stop-color="#FFFFFF" />
-              <stop offset="45%" stop-color="#FFF6DF" />
-              <stop offset="100%" stop-color="#E8C468" />
-            </radialGradient>
-            <path id="bladeShape" d="M256,286.24 L334.22,381.17 Q256,350.46 177.78,381.17 Z" fill="url(#bladeGrad)" stroke="#FFF6DF" stroke-width="3" stroke-opacity="0.9" />
-          </defs>
-          <g class="spinning-iris">
-            <use href="#bladeShape" />
-            <use href="#bladeShape" transform="rotate(72 256 256)" />
-            <use href="#bladeShape" transform="rotate(144 256 256)" />
-            <use href="#bladeShape" transform="rotate(216 256 256)" />
-            <use href="#bladeShape" transform="rotate(288 256 256)" />
-            <circle cx="256" cy="256" r="32" fill="url(#lensGrad)" />
-          </g>
-        </svg>
-      </div>
-      <div class="brand-name">CINEMAX</div>
-    </div>
-
-    <!-- Poster -->
-    <div class="poster-wrapper">
-      <img id="poster" class="poster-img" style="display: none;" alt="Poster" />
-      <div id="poster-fallback" class="poster-fallback">🍿</div>
-    </div>
-
-    <!-- Title & Description -->
-    <h1 id="title" class="title">CineMax</h1>
-    <div id="status-badge" class="status-badge" style="display: none;">Ready to Watch</div>
-    <p id="subtitle" class="subtitle">Watch and download high-quality movies, series, and anime without ads.</p>
-
-    <!-- Buttons -->
-    <div class="btn-group">
-      <a id="open-app-btn" class="btn btn-blade" href="#">
-        <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-        Open in CineMax App
-      </a>
-
-      <a id="telegram-btn" class="btn btn-telegram" href="https://t.me/CineMax0Updates" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.75-.55 2.92-1.27 4.86-2.11 5.83-2.52 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg>
-        Get the App (Telegram)
-      </a>
-    </div>
-
-    <div class="footer-note">
-      If the app didn't open automatically, tap <strong>Open in CineMax App</strong> above.
-    </div>
+  <!-- Ambient Dynamic Poster Backdrop Blur -->
+  <div class="hero-backdrop-container">
+    <img id="bg-blur" class="hero-backdrop-img" alt="" />
+    <div class="hero-backdrop-overlay"></div>
   </div>
+
+  <!-- Header with CineMax Vector Art from AnimatedAppName & Static Blade Spinner -->
+  <header>
+    <a href="https://m0sad67.github.io/CinMax/" class="brand-link">
+      <!-- Static 5-Blade Aperture Spinner -->
+      <svg class="static-spinner" viewBox="0 0 512 512">
+        <defs>
+          <linearGradient id="bladeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#FFF6DF" />
+            <stop offset="50%" stop-color="#E8C468" />
+            <stop offset="100%" stop-color="#9C6F19" />
+          </linearGradient>
+          <radialGradient id="lensGrad" cx="35%" cy="35%" r="65%">
+            <stop offset="0%" stop-color="#FFFFFF" />
+            <stop offset="45%" stop-color="#FFF6DF" />
+            <stop offset="100%" stop-color="#E8C468" />
+          </radialGradient>
+          <path id="bladeShape" d="M256,286.24 L334.22,381.17 Q256,350.46 177.78,381.17 Z" fill="url(#bladeGrad)" stroke="#FFF6DF" stroke-width="2.5" />
+        </defs>
+        <g>
+          <use href="#bladeShape" />
+          <use href="#bladeShape" transform="rotate(72 256 256)" />
+          <use href="#bladeShape" transform="rotate(144 256 256)" />
+          <use href="#bladeShape" transform="rotate(216 256 256)" />
+          <use href="#bladeShape" transform="rotate(288 256 256)" />
+          <circle cx="256" cy="256" r="30" fill="url(#lensGrad)" />
+        </g>
+      </svg>
+
+      <!-- Handwritten CineMax Vector Logo directly from lib/widgets/animations/animated_app_name.dart -->
+      <svg class="animated-logo-svg" viewBox="0 0 870 260" fill="none" stroke="#E8C468" stroke-linecap="round" stroke-linejoin="round">
+        <!-- C -->
+        <path d="M100 65 C55 60 25 90 28 132 C31 174 60 202 105 198" stroke-width="15" />
+        <!-- I -->
+        <path d="M148 68 C146 110 146 155 152 196" stroke-width="14" />
+        <circle cx="148" cy="45" r="7" fill="#E8C468" stroke="none" />
+        <!-- N -->
+        <path d="M195 198 L192 66 L280 196 L280 66" stroke-width="15" />
+        <!-- E -->
+        <path d="M405 68 L337 64 L335 196 L405 198" stroke-width="14" />
+        <path d="M336 131 L390 131" stroke-width="14" />
+        <!-- M -->
+        <path d="M440 198 C438 152 436 106 438 66 C465 108 490 148 495 155 C502 146 528 106 555 66 C555 110 555 155 553 198" stroke-width="15" />
+        <!-- A -->
+        <path d="M598 197 C613 153 628 109 640 64 C654 108 668 152 680 196" stroke-width="15" />
+        <path d="M610 148 C628 145 648 146 665 150" stroke-width="15" />
+        <!-- X -->
+        <path d="M715 68 C745 108 775 150 793 196" stroke-width="15" />
+        <path d="M795 66 C767 108 738 152 718 194" stroke-width="15" />
+        <!-- Underline -->
+        <path d="M30 205 C253 225 583 225 830 205" stroke-width="6" stroke="rgba(232, 196, 104, 0.6)" />
+        <!-- End dot -->
+        <circle cx="835" cy="205" r="7" fill="#E8C468" stroke="none" />
+      </svg>
+    </a>
+
+    <a class="header-cta" href="https://t.me/CineMax0Updates" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.75-.55 2.92-1.27 4.86-2.11 5.83-2.52 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg>
+      Telegram Updates
+    </a>
+  </header>
+
+  <!-- Main Full-Page Showcase -->
+  <main>
+    <div class="content-grid">
+      <!-- Left Column: Poster -->
+      <div class="poster-column">
+        <div class="poster-frame">
+          <img id="poster" class="poster-img" alt="Poster" />
+          <div id="poster-fallback" class="poster-fallback">🍿</div>
+        </div>
+      </div>
+
+      <!-- Right Column: Content Details -->
+      <div class="details-column">
+        <div class="badge-row">
+          <span class="badge-gold">✨ Ready to Watch</span>
+          <span class="badge-pill">Full HD / 4K</span>
+          <span class="badge-pill">Zero Ads</span>
+          <span class="badge-pill">Multi-Source</span>
+        </div>
+
+        <h1 id="title" class="movie-title">CineMax</h1>
+        <p id="description" class="movie-description">
+          Watch and download high-quality movies, series, and anime with fast servers and multi-language subtitles on CineMax.
+        </p>
+
+        <!-- Primary Action CTAs -->
+        <div class="action-row">
+          <a id="open-app-btn" class="btn btn-blade-primary" href="#">
+            <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            Watch in CineMax App
+          </a>
+
+          <a id="telegram-btn" class="btn btn-telegram-outline" href="https://t.me/CineMax0Updates" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.75-.55 2.92-1.27 4.86-2.11 5.83-2.52 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg>
+            Get App (Telegram)
+          </a>
+        </div>
+
+        <div class="redirect-note">
+          <span>📲</span> If the app didn't open automatically, tap <strong>Watch in CineMax App</strong>.
+        </div>
+
+        <!-- CineMax Perks Banner -->
+        <div class="perks-container">
+          <div class="perk-item">
+            <span class="perk-icon">⚡</span>
+            <span>Ultra Fast Playback</span>
+          </div>
+          <div class="perk-item">
+            <span class="perk-icon">📥</span>
+            <span>Background Downloads</span>
+          </div>
+          <div class="perk-item">
+            <span class="perk-icon">🎬</span>
+            <span>Multi-Source Scraping</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    CineMax — Premium Movies, TV Series & Anime Experience. Join <a href="https://t.me/CineMax0Updates" target="_blank" rel="noopener">@CineMax0Updates</a> for latest releases.
+  </footer>
 
   <script>
     (function() {
@@ -392,10 +627,9 @@
           const title = data.t || 'CineMax';
           const poster = data.p || '';
           
-          document.title = title + " - CineMax";
+          document.title = title + " - Watch on CineMax";
           document.getElementById('title').textContent = title;
-          document.getElementById('status-badge').style.display = 'inline-block';
-          document.getElementById('subtitle').textContent = "Watch and download \"" + title + "\" on CineMax.";
+          document.getElementById('description').textContent = "Watch and download \"" + title + "\" in high quality with multi-source streaming and subtitles on CineMax.";
 
           if (poster && poster.startsWith('http')) {
             const posterEl = document.getElementById('poster');
@@ -417,14 +651,13 @@
         }
       }
 
-      // 3. Set Open in App Button
+      // 3. Set Open in App Button href
       const openBtn = document.getElementById('open-app-btn');
       openBtn.href = appDeepLink;
 
       // 4. Auto-launch app redirect on mobile devices
       const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
       if (isMobile && rawPayload) {
-        // Small delay to let DOM render first
         setTimeout(function() {
           window.location.href = appDeepLink;
         }, 400);

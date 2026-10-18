@@ -1,10 +1,10 @@
 {
-  "latest_version": "1.5.0",
+  "latest_version": "2.0.0",
   "download_urls": {
-    "armeabi-v7a": "https://github.com/M0SAD67/CinMax/releases/download/V1.5.0/CineMax-v7a-release.apk",
-    "arm64-v8a": "https://github.com/M0SAD67/CinMax/releases/download/V1.5.0/CineMax-v8a-release.apk",
-    "universal": "https://github.com/M0SAD67/CinMax/releases/download/V1.5.0/CineMax-V1.5.0.apk"
+    "armeabi-v7a": "https://github.com/M0SAD67/CinMax/releases/download/v2.0.0/CineMax-v7a-release.apk",
+    "arm64-v8a": "https://github.com/M0SAD67/CinMax/releases/download/v2.0.0/CineMax-v8a-release.apk",
+    "universal": "https://github.com/M0SAD67/CinMax/releases/download/v2.0.0/CineMax-v2.0.0.apk"
   },
-  "release_notes": "🚀 What's New in v1.5.0:\n\n🎨 App Identity Redesign & Improvements:\n- New app icon, logo, and animated launch screen for a polished first impression.\n- Fully redesigned settings page with a new layout and visual system.\n- Custom icons are being rolled out across the app in upcoming updates.\n\n⚡ Quick Play:\n- Automatically picks the best server for faster, smoother playback.\n- Manual server selection is still available whenever you want full control.\n\n🖥️ Redesigned Content Screens:\n- Details screen rebuilt from the ground up with manga download support.\n- Explore screen redesigned and anime screen updated for the new details layout.\n- Source selection screen now supports landscape mode.\n\n📚 Manga Mode Dock:\n- Redesigned dock with a dedicated manga mode entry point.\n\n▶️ Instant Continue Watching:\n- Tapping Continue Watching now opens the player directly to resume — no extra stop at the details screen.\n\n🛠 Technical Fixes:\n- Fixed incorrect season matching in anime search; improved overall match accuracy.\n- Fixed internet connectivity issue affecting content loading.\n- New setting under Anime & Sources to control parallel source search count — reduces lag on older devices.",
+  "release_notes": "🚀 CineMax v2.0.0 is available now!\n\n⚠️ Important: After installing this update, please uninstall the old version of CineMax\n\n🏛️ Architectural Overhaul & Core Restructuring:\n- Complete MVI modernization for hubs, search, and details with massive performance boosts, instant caching, and fluid 60FPS animations.\n\n💬 Direct Subtitle Downloader:\n- Download multilingual subtitles directly for offline viewing with seamless automatic player integration.\n\n📥 Background Download Engine 2.0:\n- Rock-solid background downloading with live Android notification progress, high-speed multi-threaded chunks, and auto-retry.\n\n⚡ High-Speed Streaming Servers:\n- Expanded fast-streaming direct CDN servers with automatic best-server selection and unreleased episode countdowns.\n\n👑 CineMax Blade 2.0 & VIP System:\n- Signature 3D gold blade vector icons, VIP perks, full RTL Arabic layout support, and advanced bilingual typography scaling.\n\n🎬 Dedicated Hubs & Scoped Search:\n- All-new Arabic Cinema and Anime Hubs with proscenium billboard carousels and multi-source parallel scoped search.",
   "force_update": true
 }

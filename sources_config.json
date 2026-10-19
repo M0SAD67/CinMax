@@ -485,6 +485,365 @@
       "categories": [
         "movies"
       ]
+    },
+    {
+      "name": "BabDrama",
+      "categories": [
+        "arabic"
+      ]
+    },
+    {
+      "name": "Krmzy",
+      "categories": [
+        "arabic"
+      ]
+    },
+    {
+      "name": "Anidb",
+      "categories": [
+        "anime"
+      ]
+    },
+    {
+      "name": "Anikoto",
+      "categories": [
+        "anime"
+      ]
+    },
+    {
+      "name": "AniLight",
+      "categories": [
+        "anime"
+      ]
+    },
+    {
+      "name": "Anime3rb",
+      "categories": [
+        "anime"
+      ]
+    },
+    {
+      "name": "AnimeLand",
+      "categories": [
+        "anime"
+      ],
+      "icon": "source_animeland.bmp"
+    },
+    {
+      "name": "AnimeX",
+      "categories": [
+        "anime"
+      ]
+    },
+    {
+      "name": "ArabicToons",
+      "categories": [
+        "anime"
+      ]
+    },
+    {
+      "name": "FireAni",
+      "categories": [
+        "anime"
+      ]
+    },
+    {
+      "name": "JKanime",
+      "categories": [
+        "anime"
+      ]
+    },
+    {
+      "name": "Miruro",
+      "categories": [
+        "anime"
+      ]
+    },
+    {
+      "name": "Okanime",
+      "categories": [
+        "anime"
+      ]
+    },
+    {
+      "name": "PirateXPlay",
+      "categories": [
+        "anime"
+      ]
+    },
+    {
+      "name": "SuperCartoons",
+      "categories": [
+        "anime"
+      ]
+    },
+    {
+      "name": "WCO",
+      "categories": [
+        "anime"
+      ]
+    },
+    {
+      "name": "WitAnime",
+      "categories": [
+        "anime"
+      ]
+    },
+    {
+      "name": "1Flex",
+      "categories": [
+        "movies"
+      ],
+      "icon": "source_1movies.png"
+    },
+    {
+      "name": "Aether",
+      "categories": [
+        "movies"
+      ]
+    },
+    {
+      "name": "Bingr",
+      "categories": [
+        "movies"
+      ]
+    },
+    {
+      "name": "Cinejoy",
+      "categories": [
+        "movies"
+      ]
+    },
+    {
+      "name": "FMovies",
+      "categories": [
+        "movies"
+      ]
+    },
+    {
+      "name": "GLVietSub",
+      "categories": [
+        "movies"
+      ]
+    },
+    {
+      "name": "MovieBox",
+      "categories": [
+        "movies"
+      ]
+    },
+    {
+      "name": "MovieKHD",
+      "categories": [
+        "movies"
+      ]
+    },
+    {
+      "name": "MoviesMod",
+      "categories": [
+        "movies"
+      ]
+    },
+    {
+      "name": "Movix",
+      "categories": [
+        "movies"
+      ],
+      "icon": "source_movix.png"
+    },
+    {
+      "name": "MyAsianTV",
+      "categories": [
+        "korean",
+        "movies"
+      ]
+    },
+    {
+      "name": "Nxsha",
+      "categories": [
+        "movies"
+      ]
+    },
+    {
+      "name": "Rezka",
+      "categories": [
+        "movies"
+      ]
+    },
+    {
+      "name": "SeriesT",
+      "categories": [
+        "movies"
+      ]
+    },
+    {
+      "name": "StreamingUnity",
+      "categories": [
+        "movies"
+      ],
+      "icon": "source_streamunity.png"
+    },
+    {
+      "name": "Turkish123",
+      "categories": [
+        "movies"
+      ]
+    },
+    {
+      "name": "Uflix",
+      "categories": [
+        "movies"
+      ]
+    },
+    {
+      "name": "DoramaLand",
+      "categories": [
+        "korean"
+      ]
+    },
+    {
+      "name": "Dramamoly",
+      "categories": [
+        "korean"
+      ]
+    },
+    {
+      "name": "Dramanice",
+      "categories": [
+        "korean"
+      ]
+    },
+    {
+      "name": "Dramika",
+      "categories": [
+        "korean"
+      ]
+    },
+    {
+      "name": "Ikisoda",
+      "categories": [
+        "hentai"
+      ]
+    },
+    {
+      "name": "JAV444",
+      "categories": [
+        "hentai"
+      ]
+    },
+    {
+      "name": "JAV HD",
+      "categories": [
+        "hentai"
+      ]
+    },
+    {
+      "name": "JAV Menu",
+      "categories": [
+        "hentai"
+      ]
+    },
+    {
+      "name": "JAVQuick",
+      "categories": [
+        "hentai"
+      ]
+    },
+    {
+      "name": "JAVWine",
+      "categories": [
+        "hentai"
+      ]
+    },
+    {
+      "name": "JAV Guru",
+      "categories": [
+        "hentai"
+      ]
+    },
+    {
+      "name": "MissAV",
+      "categories": [
+        "hentai"
+      ]
+    },
+    {
+      "name": "SexTB",
+      "categories": [
+        "hentai"
+      ]
+    },
+    {
+      "name": "AnimeIdHentai",
+      "categories": [
+        "hentai"
+      ]
+    },
+    {
+      "name": "HentaiGem",
+      "categories": [
+        "hentai"
+      ]
+    },
+    {
+      "name": "HentaiMama",
+      "categories": [
+        "hentai"
+      ]
+    },
+    {
+      "name": "HentaiMoon",
+      "categories": [
+        "hentai"
+      ]
+    },
+    {
+      "name": "HentaiPro",
+      "categories": [
+        "hentai"
+      ]
+    },
+    {
+      "name": "HentaiStream",
+      "categories": [
+        "hentai"
+      ]
+    },
+    {
+      "name": "Hentai-Sub",
+      "categories": [
+        "hentai"
+      ]
+    },
+    {
+      "name": "HentaiWorld",
+      "categories": [
+        "hentai"
+      ]
+    },
+    {
+      "name": "OnlyHentaiStuff",
+      "categories": [
+        "hentai"
+      ]
+    },
+    {
+      "name": "YacineTv",
+      "categories": [
+        "livetv"
+      ]
+    },
+    {
+      "name": "MangaDex",
+      "categories": [
+        "manga"
+      ]
+    },
+    {
+      "name": "MangaWorld",
+      "categories": [
+        "manga"
+      ]
     }
   ],
   "disabled_sources": [
@@ -524,7 +883,8 @@
     "AnimePahe",
     "VidCore",
     "4KHDHUB",
-    "Asia2TV"
+    "Asia2TV",
+    "CimaNow"
   ],
-  "last_updated": "2026-10-17T17:56:15.452354"
+  "last_updated": "2026-10-19T17:09:29.849621"
 }

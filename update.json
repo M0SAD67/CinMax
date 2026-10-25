@@ -6,5 +6,5 @@
     "universal": "https://github.com/M0SAD67/CinMax/releases/download/v2.0.0/CineMax-v2.0.0.apk"
   },
   "release_notes": "🚀 CineMax v2.0.0 is available now!\n\n⚠️ Important: After installing this update, please uninstall the old version of CineMax\n\n🏛️ Architectural Overhaul & Core Restructuring:\n- Complete MVI modernization for hubs, search, and details with massive performance boosts, instant caching, and fluid 60FPS animations.\n\n💬 Direct Subtitle Downloader:\n- Download multilingual subtitles directly for offline viewing with seamless automatic player integration.\n\n📥 Background Download Engine 2.0:\n- Rock-solid background downloading with live Android notification progress, high-speed multi-threaded chunks, and auto-retry.\n\n⚡ High-Speed Streaming Servers:\n- Expanded fast-streaming direct CDN servers with automatic best-server selection and unreleased episode countdowns.\n\n👑 CineMax Blade 2.0 & VIP System:\n- Signature 3D gold blade vector icons, VIP perks, full RTL Arabic layout support, and advanced bilingual typography scaling.\n\n🎬 Dedicated Hubs & Scoped Search:\n- All-new Arabic Cinema and Anime Hubs with proscenium billboard carousels and multi-source parallel scoped search.",
-  "force_update": false
+  "force_update": true
 }

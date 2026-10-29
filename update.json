@@ -1,10 +1,10 @@
 {
-  "latest_version": "2.0.0",
+  "latest_version": "2.0.1",
   "download_urls": {
-    "armeabi-v7a": "https://github.com/M0SAD67/CinMax/releases/download/v2.0.0/CineMax-v7a-release.apk",
-    "arm64-v8a": "https://github.com/M0SAD67/CinMax/releases/download/v2.0.0/CineMax-v8a-release.apk",
-    "universal": "https://github.com/M0SAD67/CinMax/releases/download/v2.0.0/CineMax-v2.0.0.apk"
+    "armeabi-v7a": "https://github.com/M0SAD67/CinMax/releases/download/V2.0.1/CineMax-v7a-release.apk",
+    "arm64-v8a": "https://github.com/M0SAD67/CinMax/releases/download/V2.0.1/CineMax-v8a-release.apk",
+    "universal": "https://github.com/M0SAD67/CinMax/releases/download/V2.0.1/CineMax-v2.0.1.apk"
   },
-  "release_notes": "🚀 CineMax v2.0.0 is available now!\n\n⚠️ Important: After installing this update, please uninstall the old version of CineMax\n\n🏛️ Architectural Overhaul & Core Restructuring:\n- Complete MVI modernization for hubs, search, and details with massive performance boosts, instant caching, and fluid 60FPS animations.\n\n💬 Direct Subtitle Downloader:\n- Download multilingual subtitles directly for offline viewing with seamless automatic player integration.\n\n📥 Background Download Engine 2.0:\n- Rock-solid background downloading with live Android notification progress, high-speed multi-threaded chunks, and auto-retry.\n\n⚡ High-Speed Streaming Servers:\n- Expanded fast-streaming direct CDN servers with automatic best-server selection and unreleased episode countdowns.\n\n👑 CineMax Blade 2.0 & VIP System:\n- Signature 3D gold blade vector icons, VIP perks, full RTL Arabic layout support, and advanced bilingual typography scaling.\n\n🎬 Dedicated Hubs & Scoped Search:\n- All-new Arabic Cinema and Anime Hubs with proscenium billboard carousels and multi-source parallel scoped search.",
+  "release_notes": "🚀 ما الجديد في تحديث CineMax v2.0.1:\n\n🌐 استقرار الاتصال وفك حجب المصادر:\n- حل مشكلة انقطاع الاتصال بين التطبيق والمصادر وفك الحجب للدول المحظورة لتشغيل مستقر وبدون تقطيع.\n\n📥 إصلاح مكتبة التنزيلات لهواتف سامسونج:\n- حل مشكلة تنزيل الفيديوهات على الهاتف دون ظهورها داخل التطبيق؛ الآن تظهر جميع التنزيلات في المكتبة فوراً.\n\n🇹🇷 إصلاح ودعم المسلسلات التركية المترجمة:\n- استعادة وتشغيل مصادر الدراما التركية المترجمة للعربية بالكامل وحل مشكلة عدم عملها في بعض الدول.\n\n⚡ سلاسة وسرعة فائقة من أندرويد 9 و 10 فما فوق:\n- تحسينات برمجية عميقة تضمن استجابة فائقة وسلاسة تامة في التصفح حتى على الأجهزة الاقتصادية.\n\n🎬 انترو سينمائية جديدة للتطبيق:\n- إضافة انترو سينمائية خاصة بشعار CineMax مع صوت سينمائي متزامن وقابل للتحكم عن بُعد.",
   "force_update": true
 }

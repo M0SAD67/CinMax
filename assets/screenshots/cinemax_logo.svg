@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="gold" gradientUnits="userSpaceOnUse" x1="51.2" y1="0" x2="460.8" y2="512">
+      <stop offset="0" stop-color="#FCE6AC"/>
+      <stop offset="0.55" stop-color="#E8C468"/>
+      <stop offset="1" stop-color="#9C6F19"/>
+    </linearGradient>
+    <radialGradient id="lens" gradientUnits="userSpaceOnUse" cx="248.66" cy="246.21" r="34.27">
+      <stop offset="0" stop-color="#FFF6DF"/>
+      <stop offset="0.55" stop-color="#E8C468"/>
+      <stop offset="1" stop-color="#8A6215"/>
+    </radialGradient>
+  </defs>
+  <rect width="512" height="512" rx="112" fill="#1A1006"/>
+  <g transform="translate(256 256) scale(1.5) translate(-256 -245)">
+    <g fill="url(#gold)">
+      <path d="M 256.00,286.24 L 334.22,381.17 Q 256.00,350.46 177.78,381.17 Z"/>
+      <path d="M 227.24,265.34 L 161.12,369.07 Q 166.16,285.19 112.78,220.29 Z"/>
+      <path d="M 238.23,231.54 L 119.15,200.71 Q 200.48,179.58 245.70,108.76 Z"/>
+      <path d="M 273.77,231.54 L 266.30,108.76 Q 311.52,179.58 392.85,200.71 Z"/>
+      <path d="M 284.76,265.34 L 399.22,220.29 Q 345.84,285.19 350.88,369.07 Z"/>
+    </g>
+    <path d="M 231.52,256 A 24.48,24.48 0 1,0 280.48,256 A 24.48,24.48 0 1,0 231.52,256 Z" fill="url(#lens)" stroke="#4A3512" stroke-width="2.5" stroke-opacity="0.5"/>
+    <path d="M 242.18,246.21 A 6.48,4.32 0 1,0 255.14,246.21 A 6.48,4.32 0 1,0 242.18,246.21 Z" fill="#FFF8E8" fill-opacity="0.7"/>
+  </g>
+</svg>

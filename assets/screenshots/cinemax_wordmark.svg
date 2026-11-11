@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 870 260" width="870" height="260">
+  <defs>
+    <!-- userSpaceOnUse so perfectly horizontal strokes (like the E bar) still render -->
+    <linearGradient id="wm_gold" gradientUnits="userSpaceOnUse" x1="0" y1="40" x2="870" y2="220">
+      <stop offset="0" stop-color="#FCE6AC"/>
+      <stop offset="0.55" stop-color="#E8C468"/>
+      <stop offset="1" stop-color="#9C6F19"/>
+    </linearGradient>
+  </defs>
+
+  <path d="M 30,205 C 253,225 583,225 830,205" stroke="url(#wm_gold)" stroke-width="6" stroke-linecap="round" stroke-opacity="0.65" fill="none"/>
+
+  <g stroke="url(#wm_gold)" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M 100,65 C 55,60 25,90 28,132 C 31,174 60,202 105,198" stroke-width="15"/>
+    <path d="M 148,68 C 146,110 146,155 152,196" stroke-width="14"/>
+    <path d="M 195,198 L 192,66 L 280,196 L 280,66" stroke-width="15"/>
+    <path d="M 405,68 L 337,64 L 335,196 L 405,198" stroke-width="14"/>
+    <path d="M 336,131 L 390,131" stroke-width="14"/>
+    <path d="M 440,198 C 438,152 436,106 438,66 C 465,108 490,148 495,155 C 502,146 528,106 555,66 C 555,110 555,155 553,198" stroke-width="15"/>
+    <path d="M 598,197 C 613,153 628,109 640,64 C 654,108 668,152 680,196" stroke-width="15"/>
+    <path d="M 610,148 C 628,145 648,146 665,150" stroke-width="15"/>
+    <path d="M 715,68 C 745,108 775,150 793,196 M 795,66 C 767,108 738,152 718,194" stroke-width="15"/>
+  </g>
+
+  <circle cx="148" cy="45" r="6.5" fill="url(#wm_gold)"/>
+  <circle cx="835" cy="205" r="6.5" fill="url(#wm_gold)" opacity="0.85"/>
+</svg>
